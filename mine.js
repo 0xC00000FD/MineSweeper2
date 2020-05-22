@@ -125,8 +125,8 @@ class Cell{
 }
 
 let len = 75;
-let BombCount = 125;
 let row = Math.floor(innerHeight/len), col = Math.floor(innerWidth/len);
+let BombCount = Math.floor(row*col/5);
 let cellArray = [];
 let diri = [-1, 0, 1, 0, 1, -1, -1, 1];
 let dirj = [0, 1, 0, -1, 1, 1, -1, -1];
