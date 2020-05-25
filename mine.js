@@ -186,13 +186,22 @@ for(let i = 0; i < row; i++){
     }
 }
 */
+let bombsw = 1;
 const animate = () => {
-    requestAnimationFrame(animate);
-
-    for(let i = 0; i < row; i++){
-        for(let j = 0; j < col; j++){
-            cellArray[i][j].draw();
+    if(bombsw){
+        requestAnimationFrame(animate);
+        for(let i = 0; i < row; i++){
+            for(let j = 0; j < col; j++){
+                cellArray[i][j].draw();
+                if(cellArray[i][j].isBomb && cellArray[i][j].visited){
+                    bombsw = 0;
+                }
+            }
         }
+    } else {
+        c.font = "175px Impact";
+        c.fillStyle = '#3498DB';
+        c.fillText("Ai comis-o barosane.", innerWidth/4, innerHeight/2, 3*innerWidth/4);
     }
 }
 animate();
