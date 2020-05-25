@@ -201,7 +201,7 @@ const animate = () => {
     } else {
         let size = Math.floor(innerWidth/16);
         c.font = `${size}px Impact`;
-        c.fillStyle = '#3498DB';
+        c.fillStyle = '#DE4847';
         c.textAlign = "center";
         c.fillText("Ai comis-o barosane.", innerWidth/2, innerHeight/2);
     }
