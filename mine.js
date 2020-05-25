@@ -199,9 +199,11 @@ const animate = () => {
             }
         }
     } else {
-        c.font = "175px Impact";
+        let size = Math.floor(innerWidth/16);
+        c.font = `${size}px Impact`;
         c.fillStyle = '#3498DB';
-        c.fillText("Ai comis-o barosane.", innerWidth/4, innerHeight/2, 3*innerWidth/4);
+        c.textAlign = "center";
+        c.fillText("Ai comis-o barosane.", innerWidth/2, innerHeight/2);
     }
 }
 animate();
